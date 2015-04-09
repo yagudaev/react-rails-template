@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: mike
+  password:
+
+development:
+  <<: *default
+  database: react-rails-development
+
+test:
+  <<: *default
+  database: react-rails-test
+
+production:
+  <<: *default
+  database: react-rails-production
